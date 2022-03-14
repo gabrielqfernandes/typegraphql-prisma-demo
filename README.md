@@ -25,7 +25,7 @@
 This is a simple `To-do` backend _**graphql**_ application. If you're used to building queries with `Prisma` you'll feel right at home. You can manage your `To-do` database with Pg-admin on a port of your choice.
 ## Running
 
-First you must create a `.env` file following the project's example.
+First you must create a `.env` file following the project's example. Then all you have to do is to run the following command:
 
 ```sh
 npm start
