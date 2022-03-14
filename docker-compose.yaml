@@ -6,29 +6,35 @@ services:
     restart: always
     volumes:
       - ./pg-data:/var/lib/postgresql/data
-    environment:
-      POSTGRES_USER: root
-      POSTGRES_PASSWORD: admin
-      POSTGRES_DB: todo_db
+    env_file:
+      - .env
     ports:
-      - '8080:5432'
+      - 8080:5432
+    environment:
+      POSTGRES_USER: ${DB_USER}
+      POSTGRES_PASSWORD: ${DB_PSWD}
+      POSTGRES_DB: ${DB_NAME}
 
   pgadmin:
     container_name: pgadmin4_container
     image: dpage/pgadmin4
     restart: always
+    env_file:
+      - .env
     environment:
-      PGADMIN_DEFAULT_EMAIL: admin@admin.com
-      PGADMIN_DEFAULT_PASSWORD: root
+      PGADMIN_DEFAULT_EMAIL: ${PG_AMDIN_EMAIL}
+      PGADMIN_DEFAULT_PASSWORD: ${PG_ADMIN_PSWD}
     ports:
-      - '5050:80'
+      - '${PG_ADMIN_PORT}:80'
 
   server:
     build: .
+    env_file:
+      - .env
     depends_on:
       - db
     ports:
-      - 4000:4000
+      - ${PORT}:${PORT}
     command: >
       bash -c "
       yarn build 
