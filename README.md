@@ -16,7 +16,7 @@
 ## Requirements
 
 - Docker & Docker Compose
-- Node.js v15 or superior
+- Node.js
 
 <h1>
 
