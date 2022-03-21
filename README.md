@@ -22,7 +22,7 @@
 
 ## Description
 
-This is a simple `To-do` backend _**graphql**_ application. If you're used to building queries with `Prisma` you'll feel right at home. You can manage your `To-do` database with Pg-admin on a port of your choice.
+**_TypeGraphQL_** provides an integration with **_Prisma_** by the `typegraphql-prisma` package. It generates the type classes and CRUD resolvers based on the Prisma schema, so we can execute complex queries or mutations that corresponds to the Prisma actions, without having to write any code for that. This is a basic `To-do` application and you can manage your database with **_Pg-admin_** on a port of your choice.
 ## Running
 
 First you must create a `.env` file following the example this project provides. Then all you have to do is to run the following command:
