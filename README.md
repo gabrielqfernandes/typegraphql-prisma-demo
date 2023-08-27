@@ -11,14 +11,10 @@
     <img src="https://www.vectorlogo.zone/logos/graphql/graphql-icon.svg" width=55>
 </p>
 
----
-
 ## Requirements
-
 - Docker & Docker Compose
-- Node.js
 
-<h1>
+<br>
 
 ## Description
 
@@ -28,6 +24,6 @@
 First you must create a `.env` file following the example this project provides. Then all you have to do is to run the following command:
 
 ```sh
-npm start
+docker-compose up -d
 ```
 
